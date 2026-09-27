@@ -6,10 +6,13 @@ def get_number(prompt):
         except ValueError:
             print("Invalid input. Please enter a numeric value.")
 
+def add(a, b):
+   return a + b
+
 def subtract(a, b):
     """Return a minus b."""
     return a - b
-    
+
 def multiply(a, b):
     """Return the product of a and b."""
     return a * b
