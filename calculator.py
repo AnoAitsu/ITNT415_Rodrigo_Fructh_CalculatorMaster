@@ -6,6 +6,8 @@ def get_number(prompt):
         except ValueError:
             print("Invalid input. Please enter a numeric value.")
 
+def subtract(a, b):
+       return a - b
 
 def display_menu():
     print("\n===== Calculator Master =====")
@@ -35,7 +37,7 @@ def main():
         if choice == "1":
             print(f"Result: {num1} + {num2} = {add(num1, num2)}")
         elif choice == "2":
-            print("Subtraction coming soon.")
+            print(f"Result: {num1} - {num2} = {subtract(num1, num2)}")
         elif choice == "3":
             print("Multiplication coming soon.")
         elif choice == "4":
