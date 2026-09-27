@@ -1,6 +1,23 @@
 def add(a, b):
     return a + b
 
+def subtract(a, b):
+    """Return a minus b."""
+    return a - b
+
+
+def multiply(a, b):
+    """Return the product of a and b."""
+    return a * b
+
+
+def divide(a, b):
+    """Return a divided by b; raises ZeroDivisionError if b is 0."""
+    if b == 0:
+        raise ZeroDivisionError("Cannot divide by zero.")
+    return a / b
+
+
 def get_number(prompt):
     while True:
         value = input(prompt)
@@ -8,14 +25,6 @@ def get_number(prompt):
             return float(value)
         except ValueError:
             print("Invalid input. Please enter a numeric value.")
-
-def subtract(a, b):
-    """Return a minus b."""
-    return a - b
-    
-def multiply(a, b):
-    """Return the product of a and b."""
-    return a * b
 
 def display_menu():
     print("\n===== Calculator Master =====")
@@ -49,7 +58,11 @@ def main():
         elif choice == "3":
             print(f"Result: {num1} * {num2} = {multiply(num1, num2)}")
         elif choice == "4":
-            print("Division coming soon.")
+            try:
+                result = divide(num1, num2)
+                print(f"Result: {num1} / {num2} = {result}")
+            except ZeroDivisionError as e:
+                print(f"Error: {e}")
 
 
 if __name__ == "__main__":
