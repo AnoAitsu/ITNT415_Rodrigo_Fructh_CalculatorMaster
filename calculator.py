@@ -14,7 +14,7 @@ def multiply(a, b):
 def divide(a, b):
     """Return a divided by b; raises ZeroDivisionError if b is 0."""
     if b == 0:
-        raise ZeroDivisionError("Cannot divide by zero.")
+        raise ZeroDivisionError("Cannot divide by zero. Please enter a non-zero number.")
     return a / b
 
 
