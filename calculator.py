@@ -7,7 +7,8 @@ def get_number(prompt):
             print("Invalid input. Please enter a numeric value.")
 
 def subtract(a, b):
-       return a - b
+    """Return a minus b."""
+    return a - b
 
 def display_menu():
     print("\n===== Calculator Master =====")
