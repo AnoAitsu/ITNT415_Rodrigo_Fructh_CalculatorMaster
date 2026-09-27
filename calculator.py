@@ -26,13 +26,41 @@ def get_number(prompt):
         except ValueError:
             print("Invalid input. Please enter a numeric value.")
 
-def display_menu():
-    print("\n===== Calculator Master =====")
-    print("1. Addition")
-    print("2. Subtraction")
-    print("3. Multiplication")
-    print("4. Division")
-    print("5. Exit")
+# ANSI color codes
+RESET = "\033[0m"
+CYAN = "\033[96m"
+YELLOW = "\033[93m"
+GREEN = "\033[92m"
+MAGENTA = "\033[95m"
+BOLD = "\033[1m"
+
+
+def display_menu(selected_index=1):
+    options = [
+        ("+", "ADDITION"),
+        ("-", "SUBTRACTION"),
+        ("*", "MULTIPLICATION"),
+        ("/", "DIVISION"),
+        ("x", "EXIT"),
+    ]
+    width = 44
+
+    print(CYAN + "╔" + "═" * width + "╗" + RESET)
+    print(CYAN + "║" + RESET + BOLD + YELLOW + "CALCULATOR MASTER".center(width) + RESET + CYAN + "║" + RESET)
+    print(CYAN + "╠" + "═" * width + "╣" + RESET)
+    print(CYAN + "║" + " " * width + "║" + RESET)
+
+    for i, (symbol, name) in enumerate(options, 1):
+        pointer = ">" if i == selected_index else " "
+        line = f"   {pointer} [{GREEN}{symbol}{RESET}] {name}"
+        visible_len = len(f"   {pointer} [{symbol}] {name}")
+        padding = " " * (width - visible_len)
+        print(CYAN + "║" + RESET + line + padding + CYAN + "║" + RESET)
+
+    print(CYAN + "║" + " " * width + "║" + RESET)
+    print(CYAN + "╠" + "═" * width + "╣" + RESET)
+    print(CYAN + "║" + RESET + "A: SELECT          B: BACK".center(width) + CYAN + "║" + RESET)
+    print(CYAN + "╚" + "═" * width + "╝" + RESET)
 
 
 def main():
