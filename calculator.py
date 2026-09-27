@@ -1,3 +1,6 @@
+def add(a, b):
+    return a + b
+
 def get_number(prompt):
     while True:
         value = input(prompt)
