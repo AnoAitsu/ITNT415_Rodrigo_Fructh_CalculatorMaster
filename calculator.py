@@ -9,6 +9,10 @@ def get_number(prompt):
 def subtract(a, b):
     """Return a minus b."""
     return a - b
+    
+def multiply(a, b):
+    """Return the product of a and b."""
+    return a * b
 
 def display_menu():
     print("\n===== Calculator Master =====")
@@ -40,7 +44,7 @@ def main():
         elif choice == "2":
             print(f"Result: {num1} - {num2} = {subtract(num1, num2)}")
         elif choice == "3":
-            print("Multiplication coming soon.")
+            print(f"Result: {num1} * {num2} = {multiply(num1, num2)}")
         elif choice == "4":
             print("Division coming soon.")
 
