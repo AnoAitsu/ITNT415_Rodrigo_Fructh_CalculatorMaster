@@ -33,7 +33,7 @@ def main():
         num2 = get_number("Enter the second number: ")
 
         if choice == "1":
-            print("Addition coming soon.")
+            print(f"Result: {num1} + {num2} = {add(num1, num2)}")
         elif choice == "2":
             print("Subtraction coming soon.")
         elif choice == "3":
