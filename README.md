@@ -25,4 +25,6 @@ was developed on its own branch and merged into main via a reviewed Pull Request
 - Continuous execution until the user chooses Exit
 
 ## Sample Execution Screenshot
-[Insert screenshot here]
+<img width="1917" height="1078" alt="All operations running" src="https://github.com/user-attachments/assets/13e06216-8292-4a99-872d-0a92a8d7decd" />
+<img width="1917" height="597" alt="Invalid input and Divide-by-Zero handling" src="https://github.com/user-attachments/assets/443a952a-f838-437a-bff6-ac69340bc0f6" />
+
