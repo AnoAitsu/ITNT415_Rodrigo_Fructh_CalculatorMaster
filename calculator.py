@@ -40,7 +40,7 @@ def main():
         elif choice == "2":
             print(f"Result: {num1} - {num2} = {subtract(num1, num2)}")
         elif choice == "3":
-            print("Multiplication coming soon.")
+            print(f"Result: {num1} * {num2} = {multiply(num1, num2)}")
         elif choice == "4":
             print("Division coming soon.")
 
